@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-image: linear-gradient(to bottom, #FDD9D9 200px, #8A8CF5, #8A8CF5);
+    animation: start 10s ease;
+    color: #ffffff;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    text-rendering: auto;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+}
+
+@media screen and (min-width: 320px) {
+    html {
+      font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    html {
+      font-size: 22px;
+    }
+  }
+
+/*!!!!!!!!!!!!!!!!!!!!! REUSABLE COMPONENTS !!!!!!!!!!!!!!!!!!!!!*/
+
+section {
+    margin: 2rem 10%;
+}
+
+h1 {
+  font-size: 120%;
+  font-weight: 300;
+  text-align: left;
+
+}
+
+.line {
+  width: 80%;
+  height: 4px;
+  background-color: #FDD9D9;
+  margin: 0 auto;
+  border-radius: 5%;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
+}
+
+.line1 {
+  animation: start-content 1.5s ease-in;
+  -webkit-animation: start-content 1.5s ease-in;
+}
+
+.line2 {
+  animation: start-content 2.5s ease-in;
+  -webkit-animation: start-content 2.5s ease-in;
+}
+
+.weight500 {
+  font-weight: 500;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!! ACCORDION !!!!!!!!!!!!!!!!!!!!!*/
+
+.accordion {
+  background-color: rgba(255, 255, 255, 0);
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 180%;
+  font-weight: 300;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  outline: none;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  font-size: 100%;
+  text-align: center;
+  -webkit-transition: max-height 0.2s ease-out;
+  -moz-transition: max-height 0.2s ease-out;
+  -ms-transition: max-height 0.2s ease-out;
+  -o-transition: max-height 0.2s ease-out;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!! ANIMATIONS !!!!!!!!!!!!!!!!!!!!!*/
+
+@keyframes start-logo1 {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+70% {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+}
+
+@keyframes start-logo2 {
+0% {
+  color:rgba(138, 140, 245, 0);
+  transform: translate(0, 100px);
+  -webkit-transform: translate(0, 100px);
+  -moz-transform: translate(0, 100px);
+  -ms-transform: translate(0, 100px);
+  -o-transform: translate(0, 100px);
+}
+70% {
+  transform: translate(0, 60px);
+  -webkit-transform: translate(0, 60px);
+  -moz-transform: translate(0, 60px);
+  -ms-transform: translate(0, 60px);
+  -o-transform: translate(0, 60px);
+}
+100% {
+  color: #8A8CF5;
+  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+}
+}
+
+@keyframes start-content {
+  0% {
+    transform: translate(0, 1000px)  ;
+    -webkit-transform: translate(0, 1000px)  ;
+    -moz-transform: translate(0, 1000px)  ;
+    -ms-transform: translate(0, 1000px)  ;
+    -o-transform: translate(0, 1000px)  ;
+}
+70% {
+  transform: translate(0, -50px)  ;
+  -webkit-transform: translate(0, -50px)  ;
+  -moz-transform: translate(0, -50px)  ;
+  -ms-transform: translate(0, -50px)  ;
+  -o-transform: translate(0, -50px)  ;
+}
+100% {
+  transform: translate(0, 0)  ;
+  -webkit-transform: translate(0, 0)  ;
+  -moz-transform: translate(0, 0)  ;
+  -ms-transform: translate(0, 0)  ;
+  -o-transform: translate(0, 0)  ;
+}
+}
+
+/*!!!!!!!!!!!!!!!!!!!!! LOGO !!!!!!!!!!!!!!!!!!!!!*/
+
+.logo {
+    text-align: center;
+    width: 200px;
+    margin: 10% auto 6rem auto;
+}
+
+.logo-box {
+    position: relative;
+    background-color: #8A8CF5;
+    color: #FDD9D9;
+    height: 200px;
+    font-size: 220%;
+    font-style: italic;
+    animation: start-logo1 3s ease;
+    -webkit-animation: start-logo1 3s ease;
+}
+
+.logo-box-text {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+.logo-outbox {
+  position: relative;
+  color: #8A8CF5;
+}
+
+.logo-outbox-text {
+  position: absolute;
+  left: 7%;
+  font-size: 100%;
+  font-weight: 400;
+  animation: start-logo2 3s ease ;
+  -webkit-animation: start-logo2 3s ease ;
+}
+
+
+/*!!!!!!!!!!!!!!!!!!!!! SECTION ABOUT ME !!!!!!!!!!!!!!!!!!!!!*/
+
+.about-me {
+  animation: start-content 1.2s ease-in;
+  -webkit-animation: start-content 1.2s ease-in;
+}
+
+.about-me h1 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-me p {
+  line-height: 1.5;
+  text-align: left;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!! SECTION PORTFOLIO !!!!!!!!!!!!!!!!!!!!!*/
+
+.portfolio {
+  animation-name: start-content;
+  animation-duration: 2s; 
+  animation-timing-function: ease-in; 
+}
+
+.portfolio__item {
+  display: block;
+  margin: 2rem auto 0 auto;
+  width: 100%;
+  height: 200px;
+  background-image: url("images/karoijaro_s.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.portfolio__item a {
+  text-decoration: none;
+}
+
+.item--link {
+  height: 200px;
+  width: 100%;
+}
+
+.portfolio__item--titlespace {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  background-color: rgba(107, 109, 224, 0.7);
+}
+
+.portfolio__item--titlespace--tools {
+  text-align: left;
+  padding: 1em 0 0 1em;
+  font-size: 60%;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.portfolio__item--titlespace--title {
+  color: rgb(255, 131, 131);
+  text-transform: uppercase;
+  font-size: 110%;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-top: 1em;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!! SECTION HIRE ME !!!!!!!!!!!!!!!!!!!!!*/
+
+.hire-me {
+  animation: start-content 2.6s ease-in;
+  -webkit-animation: start-content 2.6s ease-in;
+}
+
+.hire-me p {
+  margin-top: 2rem;
+}
+
+/*!!!!!!!!!!!!!!!!!!!!! FOOTER !!!!!!!!!!!!!!!!!!!!!*/
+
+footer {
+  background-color: #fff;
+  color: #8A8CF5;
+  font-weight: 500;
+  font-size: 80%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5em;
+  padding-top: 0.6em;
+}
+
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!! MEDIA QUERRIES !!!!!!!!!!!!!!!!!!!!!*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+@media (min-width: 768px) {
+  .logo {
+    padding-bottom: 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  html, body {
+    background-image: linear-gradient(to right, #FDD9D9, #8A8CF5, #8A8CF5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button {
+    transition: color 1s;
+    -webkit-transition: color 1s;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s;
+    -o-transition: color 1s;
+}
+
+  button:hover,
+  button:active {
+    color: rgb(13, 16, 190);
+  }
+
+  section {
+    margin: 2rem 10%;
+  }
+
+  header {
+    flex-basis: 100%;
+  }
+
+  .logo {
+    padding-top: 105px;
+    margin: 0 auto;
+  }
+
+  .logo-box {
+    font-size: 300%;
+  }
+
+  .logo-outbox-text {
+    font-size: 100%;
+  }
+
+  .line {
+    width: 50%;
+    margin-left: 4rem;
+  }
+
+  .accordion {
+    font-size: 170%;
+  } 
+
+  .about-me p {
+    width: 65%;
+  }
+
+  .portfolio__item {
+    width: 80%;
+    height: 250px;
+  }
+
+}
